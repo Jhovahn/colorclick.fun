@@ -14,8 +14,8 @@ class App extends Component {
     this.state = {
       cords: [{ x: 250, y: 250 }],
       target: {
-        x: Math.round(Math.random() * 1000),
-        y: Math.round(Math.random() * 1000)
+        x: Math.round(Math.random() * Number(window.innerHeight)),
+        y: Math.round(Math.random() * Number(window.innerWidth))
       },
       score: 10,
       lastClick: { x: 0, y: 0 }
@@ -49,6 +49,7 @@ class App extends Component {
   };
 
   render() {
+    console.log(style);
     const { cords, target, score, lastClick } = this.state;
     const index = cords.length - 1;
     const last = { x: cords[index].x, y: cords[index].y };
