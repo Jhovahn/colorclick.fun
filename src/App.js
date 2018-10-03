@@ -53,9 +53,7 @@ class App extends Component {
     const index = cords.length - 1;
     const last = { x: cords[index].x, y: cords[index].y };
     const avg = (last.x / 250 + last.y / 250) / 2;
-    let r = Math.round(Math.random() * 249);
-    let g = Math.round(Math.random() * 249);
-    let b = Math.round(Math.random() * 249);
+
     return (
       <div
         className="App"
