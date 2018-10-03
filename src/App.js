@@ -21,7 +21,11 @@ class App extends Component {
       lastClick: { x: 0, y: 0 }
     };
   }
-
+  reset = () => {
+    this.setState({
+      score: 10
+    });
+  };
   getPosition = e => {
     let temp = this.state.cords;
     temp.push(e);
@@ -72,6 +76,13 @@ class App extends Component {
         {/*<h1>{`${last.x} ${last.y}`}</h1>*/}
         <h1>{`${lastClick.x} ${lastClick.y}`}</h1>
         <h1>{`${score}`}</h1>
+        {this.state.score === 'TRY AGAIN' ? (
+          <button className="btn btn-primary" onClick={this.reset}>
+            Reset
+          </button>
+        ) : (
+          ''
+        )}
       </div>
     );
   }
