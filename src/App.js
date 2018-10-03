@@ -14,8 +14,8 @@ class App extends Component {
     this.state = {
       cords: [{ x: 250, y: 250 }],
       target: {
-        x: Math.round(Math.random() * Number(window.innerHeight)),
-        y: Math.round(Math.random() * Number(window.innerWidth))
+        x: Math.round(Math.random() * Number(window.innerWidth)),
+        y: Math.round(Math.random() * Number(window.innerHeight))
       },
       score: 10,
       lastClick: { x: 0, y: 0 }
@@ -25,8 +25,8 @@ class App extends Component {
     this.setState({
       score: 10,
       target: {
-        x: Math.round(Math.random() * Number(window.innerHeight)),
-        y: Math.round(Math.random() * Number(window.innerWidth))
+        x: Math.round(Math.random() * Number(window.innerWidth)),
+        y: Math.round(Math.random() * Number(window.innerHeight))
       }
     });
   };
