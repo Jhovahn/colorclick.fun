@@ -23,7 +23,11 @@ class App extends Component {
   }
   reset = () => {
     this.setState({
-      score: 10
+      score: 10,
+      target: {
+        x: Math.round(Math.random() * Number(window.innerHeight)),
+        y: Math.round(Math.random() * Number(window.innerWidth))
+      }
     });
   };
   getPosition = e => {
